@@ -1,0 +1,13 @@
+---
+import ProjectCard from '@/components/ProjectCard.astro'
+
+const projectCardProps = [
+  { title: 'Pomodoro' },
+  { title: 'Weather Dashboard' },
+  { title: 'QR Code Generator' },
+]
+---
+
+<section>
+  {projectCardProps.map((props) => <ProjectCard title={props.title} />)}
+</section>

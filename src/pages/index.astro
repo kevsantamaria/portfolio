@@ -1,9 +1,15 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-import '../styles/global.css';
+import ContactCard from '@/components/ContactCard.astro';
+import Layout from '@/layouts/Layout.astro';
+import ProjectsContainer from '@/components/ProjectsContainer.astro'
+import LanguagesAndTools from '@/components/LanguagesAndTools.astro'
+import AboutMe from '@/components/AboutMe.astro'
+import '@/styles/global.css';
 ---
 
 <Layout>
-	<Welcome />
+	<ContactCard />
+	<ProjectsContainer/>
+	<LanguagesAndTools/>
+	<AboutMe/>
 </Layout>
