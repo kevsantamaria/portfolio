@@ -2,12 +2,12 @@
 import ProjectCard from '@/components/ProjectCard.astro'
 
 const projectCardProps = [
-  { title: 'Pomodoro' },
-  { title: 'Weather Dashboard' },
-  { title: 'QR Code Generator' },
+  { title: 'Weather Dashboard', class: 'row-span-1' },
+  { title: 'Pomodoro', class: 'row-span-2' },
+  { title: 'QR Code Generator', class: 'row-span-1' },
 ]
 ---
 
-<section>
-  {projectCardProps.map((props) => <ProjectCard title={props.title} />)}
+<section class="grid grid-rows-2 grid-cols-2 gap-2">
+  {projectCardProps.map((props) => <ProjectCard title={props.title} class={props.class}/>)}
 </section>

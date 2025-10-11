@@ -1,18 +1,18 @@
 ---
-import { IconBrandGithub, IconBrandLinkedin } from "@tabler/icons-react";
+import { Icon } from 'astro-icon/components'
 ---
 
-<sectionw>
-	<div>
-		<img src="" alt="Kevin Santamaria voxel-art avatar">
-	</div>
-	<div>
-		<h1>Kevin Santamaria</h1>
-		<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-	</div>
-	<div>
-		<a href="https://github.com/kevsantamaria">GitHub</a>
-		<a href="#">LinkedIn</a>
-		<button>Descargar CV</button>
-	</div>
+<section class="bg-gray-900 flex items-center justify-center gap-4 mt-10 shadow rounded-lg my-5 p-5 selection:text-secondary">
+  <div>
+    <h1 class="font-bold text-xl">Kevin Santamaria</h1>
+    <p class="text-sm text-gray-400">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+    <div>
+      <a href="https://github.com/kevsantamaria"><Icon name="uil:github"/></a>
+      <a href="#"><Icon name="uil:linkedin"/></a>
+      <button>Descargar CV</button>
+    </div>
+  </div>
+  <div class="h-[150px] w-[150px] rounded-lg">
+    <img src="./voxel-avatar.webp" alt="Voxel-art avatar" class="object-center rounded-lg" />
+  </div>
 </section>
