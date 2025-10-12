@@ -1,12 +1,15 @@
 ---
 type Props = {
-    title: string,
-    class?: string
+    imgPath: ImageMetadata,
+    imgAlt: string,
+    class?: string,
 }
 
-const { title, class: customClass = '' } = Astro.props
+const { imgPath, imgAlt, class: className} = Astro.props
 ---
 
-<article class=`border ${customClass}`>
-  <h3>{title}</h3>
+<article class={`w-full h-full ${className || ''}`}>
+  <div class="w-full h-full">
+    <img src={imgPath.src} alt={imgAlt} class="w-full h-full object-cover rounded-lg shadow" />
+  </div>
 </article>
