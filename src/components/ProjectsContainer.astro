@@ -5,26 +5,28 @@ import pomato from '@/assets/pomato-screenshot.png'
 import qrGenerator from '@/assets/qr-code-generator-screenshot.png'
 ---
 
-<h2 class="font-bold text-xl mb-4">Proyectos</h2>
+<h2 class="font-bold text-xl mb-4 text-secondary">Proyectos</h2>
 
-<section class="grid grid-cols-2 gap-4 mx-auto">
-  <div class="grid grid-rows-2 gap-4">
-    <ProjectCard 
-    imgPath={weatherApp} 
-    imgAlt="Screenshot de aplicacion del clima" 
-    />
-    
-    <ProjectCard
-      imgPath={qrGenerator}
-      imgAlt="Screenshot de aplicacion de generador de codigo QR"
-    />
-  </div>
-
-  <div>
-    <ProjectCard
-      imgPath={pomato}
-      imgAlt="Screenshot de aplicacion de pomodoro"
-      class="h-full row-span-2"
-    />
-  </div>
+<section class="flex flex-col gap-4 min-h-[80vh] mx-auto">
+  <ProjectCard
+    imgPath={pomato}
+    imgAlt="Screenshot de aplicacion de pomodoro"
+    name="Pomato"
+    extraIcons={['skill-icons:javascript']}
+    description=""
+  />
+  <ProjectCard
+    imgPath={weatherApp}
+    imgAlt="Screenshot de aplicacion del clima"
+    name="Weather Dashboard"
+    extraIcons={['skill-icons:typescript']}
+    description=""
+  />
+  <ProjectCard
+    imgPath={qrGenerator}
+    imgAlt="Screenshot de aplicacion de generador de codigo QR"
+    name="QR Code Generator"
+    extraIcons={['skill-icons:typescript']}
+    description=""
+  />
 </section>
