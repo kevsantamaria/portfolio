@@ -1,20 +1,20 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 body {
-    background-color: #202020;
-    color: #eee
+  background-color: #202020;
+  color: #eee;
 }
 
 @theme {
-    --color-primary: #5046BB;
-    --color-primary-hover: #6358D1;
-    --color-secondary: #D1B619;
+  --color-primary: #5046bb;
+  --color-primary-hover: #6358d1;
+  --color-secondary: #d1b619;
 }
 
 .custom-link {
-    @apply text-[#eee] hover:text-secondary transition-colors duration-200;
+  @apply text-[#eee] hover:text-secondary transition-colors duration-200;
 }
 
 .cta-btn {
-    @apply bg-primary px-3 py-1 rounded-lg font-semibold hover:bg-primary-hover cursor-pointer transition-colors duration-150;
+  @apply bg-primary px-3 py-1 rounded-lg font-semibold hover:bg-primary-hover cursor-pointer transition-colors duration-150;
 }
