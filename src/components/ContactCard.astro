@@ -1,5 +1,6 @@
 ---
 import { Icon } from 'astro-icon/components'
+import voxelAvatar from '@/assets/voxel-avatar.webp'
 ---
 
 <section
@@ -25,7 +26,7 @@ import { Icon } from 'astro-icon/components'
   </div>
   <div class="h-[150px] w-[150px] rounded-lg">
     <img
-      src="./voxel-avatar.webp"
+      src={voxelAvatar.src}
       alt="Voxel-art avatar"
       class="object-center rounded-lg"
     />

@@ -1,8 +1,8 @@
 ---
 import ProjectCard from '@/components/ProjectCard.astro'
-import weatherApp from '@/assets/weather-app-screenshot.png'
-import pomato from '@/assets/pomato-screenshot.png'
-import qrGenerator from '@/assets/qr-code-generator-screenshot.png'
+import pomato from '@/assets/pomato-screenshot.webp'
+import weatherApp from '@/assets/weather-app-screenshot.webp'
+import qrGenerator from '@/assets/qr-code-generator-screenshot.webp'
 ---
 
 <h2 class="font-bold text-xl mb-4 text-secondary">Proyectos</h2>
@@ -12,21 +12,27 @@ import qrGenerator from '@/assets/qr-code-generator-screenshot.png'
     imgPath={pomato}
     imgAlt="Screenshot de aplicacion de pomodoro"
     name="Pomato"
+    githubLink="https://github.com/kevsantamaria/pomodoro-app"
+    liveDemoLink="https://kevsantamaria.github.io/pomodoro-app/"
+    description="aaaaaaaaaa"
     extraIcons={['skill-icons:javascript']}
-    description=""
   />
   <ProjectCard
     imgPath={weatherApp}
     imgAlt="Screenshot de aplicacion del clima"
     name="Weather Dashboard"
+    githubLink="https://github.com/kevsantamaria/weather-dashboard"
+    liveDemoLink="https://kevsantamaria.github.io/weather-dashboard/"
+    description="aaaaaaaaaaa"
     extraIcons={['skill-icons:typescript']}
-    description=""
   />
   <ProjectCard
     imgPath={qrGenerator}
     imgAlt="Screenshot de aplicacion de generador de codigo QR"
     name="QR Code Generator"
+    githubLink="https://github.com/kevsantamaria/qr-code-generator"
+    liveDemoLink="https://qrcoodegenerator.netlify.app/"
+    description="aaaaaaaaaaaaa"
     extraIcons={['skill-icons:typescript']}
-    description=""
   />
 </section>
