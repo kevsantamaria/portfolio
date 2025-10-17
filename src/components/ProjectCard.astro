@@ -16,7 +16,7 @@ const { imgPath, imgAlt, name, githubLink, liveDemoLink, description, extraIcons
 ---
 
 <article
-  class={`flex rounded-lg h-[200px] bg-gray-900 shadow transition-transform duration-500 hover:scale-105 ${className || ''}`}
+  class={`flex rounded-lg h-[200px] bg-custom-card shadow transition-transform duration-500 hover:scale-105 ${className || ''}`}
 >
   <section class="w-[45%] h-full overflow-hidden rounded-l-lg">
     <img
@@ -42,6 +42,6 @@ const { imgPath, imgAlt, name, githubLink, liveDemoLink, description, extraIcons
       <Icon name="skill-icons:vite-dark" size={26} />
       <Icon name="skill-icons:bun-dark" size={26} />
     </div>
-    <p class="text-xs mt-2">{description}</p>
+    <p class="text-xs mt-2 text-secondary-custom-text">{description}</p>
   </section>
 </article>
