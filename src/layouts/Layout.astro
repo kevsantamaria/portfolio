@@ -1,5 +1,7 @@
 ---
 import { Particles } from '@/components/ui/shadcn-io/particles'
+import '@fontsource/alan-sans'
+import alanSansWoff2 from '@fontsource/alan-sans/files/alan-sans-latin-400-normal.woff2?url'
 ---
 
 <!doctype html>
@@ -9,6 +11,7 @@ import { Particles } from '@/components/ui/shadcn-io/particles'
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
+    <link rel="preload" as="font" type="font/woff2" href={alanSansWoff2} crossorigin="anonymous">
     <title>Kevin Santamaria</title>
   </head>
   <body class="relative h-full">
@@ -18,7 +21,7 @@ import { Particles } from '@/components/ui/shadcn-io/particles'
     <Particles
       client:load
       className="absolute inset-0 -z-10"
-      quantity={100}
+      quantity={120}
       ease={80}
       staticity={40}
       color="#ffffff"

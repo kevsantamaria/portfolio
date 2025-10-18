@@ -5,28 +5,30 @@
 
 body {
   color: var(--color-primary-custom-text);
-  background-color: #0b0b12;
+  background-color: var(--color-custom-bg);
+  font-family: 'Alan Sans';
 }
 
 @theme {
-  --color-primary: #5046bb;
-  --color-primary-hover: #6358d1;
-  --color-secondary: #d1b619;
+  --color-custom-primary: #5046bb;
+  --color-custom-primary-hover: #6358d1;
+  --color-custom-secondary: #d1b619;
+  --color-custom-bg: #0b0b12;
   --color-custom-card: #1c1b2e;
   --color-primary-custom-text: #f5f5f7;
   --color-secondary-custom-text: #b4b4c7;
 }
 
 .custom-link {
-  @apply text-[#eee] hover:text-secondary transition-colors duration-200;
+  @apply text-primary-custom-text hover:text-custom-secondary transition-colors duration-200;
 }
 
 .section-header {
-  @apply font-bold text-xl my-4 text-secondary
+  @apply font-bold text-xl my-4 text-custom-secondary
 }
 
 .cta-btn {
-  @apply bg-primary px-3 py-1 rounded-lg font-semibold hover:bg-primary-hover cursor-pointer transition-colors duration-150;
+  @apply bg-custom-primary px-3 py-1 rounded-lg font-semibold hover:bg-custom-primary-hover cursor-pointer transition-colors duration-150;
 }
 
 @theme inline {
