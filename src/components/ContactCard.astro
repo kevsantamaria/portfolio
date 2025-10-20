@@ -5,22 +5,31 @@ import CopyEmailBtn from '@/components/ui/CopyEmailBtn'
 ---
 
 <section
-  class="container bg-custom-card mt-10 shadow rounded-lg p-4 selection:text-custom-secondary flex justify-around items-center gap-4"
+  class="container bg-custom-card mt-10 shadow rounded-lg p-4 flex justify-around items-start gap-4"
 >
   <div class="flex flex-col items-left">
     <div class="mb-2">
       <h1 class="font-bold text-[22px]">Kevin Santamaria</h1>
-      <p class="text-xs text-secondary-custom-text">Desarrollador frontend</p>
+      <p class="text-xs text-secondary-custom-text">Desarrollador Frontend</p>
+      <p class="text-xs text-secondary-custom-text">+ 1 año de experiencia</p>
     </div>
 
     <div class="flex flex-col gap-2">
-      <CopyEmailBtn client:load/>
+      <CopyEmailBtn client:load />
       <div class="flex gap-1">
-        <a href="https://github.com/kevsantamaria" class="custom-link"
-          ><Icon name="tabler:brand-github" size={22} /></a
+        <a
+          href="https://github.com/kevsantamaria"
+          title="Perfil de GitHub"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="custom-link"><Icon name="tabler:brand-github" size={22} /></a
         >
-        <a href="https://www.linkedin.com/in/kevsantamaria/" class="custom-link"
-          ><Icon name="tabler:brand-linkedin" size={22} /></a
+        <a
+          href="https://www.linkedin.com/in/kevsantamaria/"
+          title="Perfil de LinkedIn"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="custom-link"><Icon name="tabler:brand-linkedin" size={22} /></a
         >
       </div>
     </div>

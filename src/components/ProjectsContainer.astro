@@ -1,38 +1,43 @@
 ---
 import ProjectCard from '@/components/ProjectCard.astro'
-import pomato from '@/assets/pomato-screenshot.webp'
-import weatherApp from '@/assets/weather-app-screenshot.webp'
-import qrGenerator from '@/assets/qr-code-generator-screenshot.webp'
+import { Icon } from 'astro-icon/components'
+
+import { getCollection } from 'astro:content'
+
+const projects = await getCollection('projects')
 ---
 
 <h2 class="section-header">Proyectos</h2>
 
-<section class="flex flex-col gap-4 mx-auto">
-  <ProjectCard
-    imgPath={pomato}
-    imgAlt="Screenshot de aplicacion de pomodoro"
-    name="Pomato"
-    githubLink="https://github.com/kevsantamaria/pomodoro-app"
-    liveDemoLink="https://kevsantamaria.github.io/pomodoro-app/"
-    description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit fugiat officiis culpa. Autem nostrum laudantium magnam! Illo fugit, numquam at eum suscipit ab beatae esse voluptate, error itaque quibusdam tempore!"
-    extraIcons={['skill-icons:javascript']}
-  />
-  <ProjectCard
-    imgPath={weatherApp}
-    imgAlt="Screenshot de aplicacion del clima"
-    name="Weather Dashboard"
-    githubLink="https://github.com/kevsantamaria/weather-dashboard"
-    liveDemoLink="https://kevsantamaria.github.io/weather-dashboard/"
-    description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit fugiat officiis culpa. Autem nostrum laudantium magnam! Illo fugit, numquam at eum suscipit ab beatae esse voluptate, error itaque quibusdam tempore!"
-    extraIcons={['skill-icons:typescript']}
-  />
-  <ProjectCard
-    imgPath={qrGenerator}
-    imgAlt="Screenshot de aplicacion de generador de codigo QR"
-    name="QR Code Generator"
-    githubLink="https://github.com/kevsantamaria/qr-code-generator"
-    liveDemoLink="https://qrcoodegenerator.netlify.app/"
-    description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit fugiat officiis culpa. Autem nostrum laudantium magnam! Illo fugit, numquam at eum suscipit ab beatae esse voluptate, error itaque quibusdam tempore!"
-    extraIcons={['skill-icons:typescript']}
-  />
+<section
+  aria-label="Mis proyectos personales"
+  class="flex flex-col gap-4 mx-auto"
+>
+  {
+    projects.map((project) => {
+      const {
+        name,
+        description,
+        descriptionTwo,
+        img,
+        imgAlt,
+        githubLink,
+        liveDemoLink,
+        extraIcons,
+      } = project.data
+
+      return (
+        <ProjectCard
+          name={name}
+          description={description}
+          descriptionTwo={descriptionTwo}
+          img={`src/assets/${img}`}
+          imgAlt={imgAlt}
+          githubLink={githubLink}
+          liveDemoLink={liveDemoLink}
+          extraIcons={extraIcons}
+        />
+      )
+    })
+  }
 </section>

@@ -10,13 +10,13 @@ body {
 }
 
 @theme {
-  --color-custom-primary: #5046bb;
-  --color-custom-primary-hover: #6358d1;
-  --color-custom-secondary: #d1b619;
-  --color-custom-bg: #0b0b12;
-  --color-custom-card: #1c1b2e;
-  --color-primary-custom-text: #f5f5f7;
-  --color-secondary-custom-text: #b4b4c7;
+  --color-custom-primary: hsl(245, 46%, 50%);
+  --color-custom-primary-hover: hsl(245, 57%, 58%);
+  --color-custom-secondary: hsl(51, 79%, 50%);
+  --color-custom-bg: hsl(240, 24%, 6%);
+  --color-custom-card: hsl(243, 26%, 14%);
+  --color-primary-custom-text: hsl(240, 11%, 96%);
+  --color-secondary-custom-text: hsl(240, 15%, 80%);
 }
 
 .custom-link {
