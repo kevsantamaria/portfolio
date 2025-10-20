@@ -1,23 +1,25 @@
 ---
 import kevin from '@/assets/kevin.webp'
 import CopyEmailBtn from '@/components/ui/CopyEmailBtn'
+import { Image } from 'astro:assets';
 ---
 
 <h2 class="section-header">Sobre Mí</h2>
 
 <section class="flex gap-4">
   <div class="h-full">
-    <img
-      src={kevin.src}
+    <Image
+      src={kevin}
       alt="Kevin Santamaria"
-      class="w-full h-full object-cover object-center rounded-lg"
+      quality={100}
+      class="object-cover object-center rounded-lg select-none"
     />
   </div>
   <div class="flex flex-col gap-4">
     <p>
       Me llamo Kevin Santamaria y soy estudiante de Ingeniería Informática.
-      Enfocado en desarrollo frontend, disfruto de crear interfaces gráficas
-      modernas, que ofrezcan rapidez y accesibilidad al usuario. He desarrollado
+      Enfocado en desarrollo frontend, disfruto de crear interfaces gráficas, 
+      que ofrezcan rapidez y accesibilidad al usuario. He desarrollado
       proyectos personales que me han permitido aplicar y ampliar mis
       conocimientos en las tecnologías web más recientes.
     </p>

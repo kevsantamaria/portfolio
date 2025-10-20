@@ -19,10 +19,10 @@ function CopyEmailBtn() {
   }
 
   return (
-    <div className="w-fit text-xs pl-2 bg-inherit border border-custom-primary rounded-lg flex items-center justify-between gap-2">
+    <div className="w-fit text-xs pl-1 md:pl-2 bg-inherit border border-custom-primary rounded-lg flex items-center justify-between gap-2">
       <span ref={emailRef}>kevsantamaria01@gmail.com</span>
         <button
-          className="bg-custom-primary rounded-r-sm hover:bg-custom-primary-hover transition-color duration-200 cursor-pointer flex items-center justify-center p-2 h-full w-10"
+          className="bg-custom-primary rounded-r-sm hover:bg-custom-primary-hover transition-color duration-200 cursor-pointer flex items-center justify-center p-1 md:p-2 h-full w-10"
           onClick={copyEmail}
           aria-label="Copiar email"
         >

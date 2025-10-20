@@ -3,7 +3,6 @@ import { Icon } from 'astro-icon/components'
 
 const {
   name,
-  order,
   description,
   descriptionTwo,
   img,
@@ -15,14 +14,14 @@ const {
 ---
 
 <article
-  class={'flex rounded-lg min-h-[222px] max-h-[400px] bg-custom-card shadow transition-transform duration-400 hover:scale-105'}
+  class="group flex rounded-lg min-h-[222px] max-h-[400px] bg-custom-card shadow transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
 >
   <aside class="w-[45%] min-h-full overflow-hidden rounded-l-lg">
-    <img src={img} alt={imgAlt} class="w-full h-full object-cover" />
+    <img src={img} alt={imgAlt} class="w-full h-full object-cover select-none" />
   </aside>
   <main class="w-full px-4 py-2">
-    <div class="w-full flex items-center justify-between mb-2">
-      <h4 class="font-bold sm:text-xl mb-1">{name}</h4>
+    <div class="w-full flex items-center justify-between mb-1">
+      <h4 class="font-bold sm:text-xl">{name}</h4>
       <div class="flex gap-1 items-center">
         <a
           href={githubLink}
@@ -41,13 +40,13 @@ const {
       </div>
     </div>
     <div class="flex gap-1">
-      {extraIcons?.map((icon: string) => <Icon name={icon} size={26} />)}
-      <Icon name="skill-icons:html" size={26} />
-      <Icon name="skill-icons:css" size={26} />
-      <Icon name="skill-icons:tailwindcss-dark" size={26} />
-      <Icon name="skill-icons:react-dark" size={26} />
-      <Icon name="skill-icons:vite-dark" size={26} />
-      <Icon name="skill-icons:bun-dark" size={26} />
+      {extraIcons?.map((icon: string) => <Icon name={icon} size={24} />)}
+      <Icon name="skill-icons:html" size={24} />
+      <Icon name="skill-icons:css" size={24} />
+      <Icon name="skill-icons:tailwindcss-dark" size={24} />
+      <Icon name="skill-icons:react-dark" size={24} />
+      <Icon name="skill-icons:vite-dark" size={24} />
+      <Icon name="skill-icons:bun-dark" size={24} />
     </div>
     <p class="text-xs mt-2 text-secondary-custom-text">{description}</p>
     <p class="text-xs mt-2 text-secondary-custom-text">{descriptionTwo}</p>
