@@ -1,10 +1,9 @@
 ---
 import ProjectCard from '@/components/ProjectCard.astro'
-import { Icon } from 'astro-icon/components'
-
 import { getCollection } from 'astro:content'
 
 const projects = await getCollection('projects')
+projects.sort((a, b) => (a.data.order || 0) - (b.data.order || 0))
 ---
 
 <h2 class="section-header">Proyectos</h2>

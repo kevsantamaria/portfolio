@@ -1,6 +1,7 @@
 ---
 name: Weather Dashboard
-description: Aplicación meteorológica impulsada por la <strong>Visual Crossing Weather API</strong>. Ofrece información actual del clima, pronóstico para las próximas 24 horas, gráficos de precipitación y temperatura semanal, y soporte para modo claro/oscuro.
+order: 2
+description: Aplicación meteorológica impulsada por la Visual Crossing Weather API. Ofrece información actual del clima, pronóstico para las próximas 24 horas, gráficos de precipitación y temperatura semanal, y soporte para modo claro/oscuro.
 descriptionTwo: Este proyecto consolidó mi experiencia en el consumo de APIs y la implementación de herramientas avanzadas como TanStack Query, Axios, Zustand y Recharts.
 img: weather-app-screenshot.webp
 imgAlt: Screenshot de aplicacion del clima
