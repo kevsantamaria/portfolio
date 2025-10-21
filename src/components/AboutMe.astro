@@ -7,15 +7,15 @@ import { Image } from 'astro:assets';
 <h2 class="section-header">Sobre Mí</h2>
 
 <section class="flex gap-4">
-  <div class="h-full">
+  <aside class="h-full">
     <Image
       src={kevin}
       alt="Kevin Santamaria"
       quality={100}
       class="object-cover object-center rounded-lg select-none"
     />
-  </div>
-  <div class="flex flex-col gap-4">
+  </aside>
+  <main class="flex flex-col gap-4">
     <p>
       Me llamo Kevin Santamaria y soy estudiante de Ingeniería Informática.
       Enfocado en desarrollo frontend, disfruto de crear interfaces gráficas, 
@@ -27,6 +27,6 @@ import { Image } from 'astro:assets';
       Mi objetivo es seguir creciendo como desarrollador y, en el futuro,
       enfocarme en crear soluciones digitales que aporten valor real.
     </p>
-    <CopyEmailBtn />
-  </div>
+    <CopyEmailBtn client:load />
+  </main>
 </section>

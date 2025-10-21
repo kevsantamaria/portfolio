@@ -1,4 +1,5 @@
 import { useRef, useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 import Check from '@/components/icons/Check'
 import Copy from '@/components/icons/Copy'
 
@@ -26,7 +27,29 @@ function CopyEmailBtn() {
           onClick={copyEmail}
           aria-label="Copiar email"
         >
-          {copied ? <Check /> : <Copy />}
+                <AnimatePresence mode="wait" initial={false}>
+        {copied ? (
+          <motion.div
+            key="check"
+            initial={{ opacity: 0, scale: 0.5, rotateY: -90 }}
+            animate={{ opacity: 1, scale: 1, rotateY: 0 }}
+            exit={{ opacity: 0, scale: 0.5, rotateY: 90 }}
+            transition={{ duration: 0.20 }}
+          >
+            <Check />
+          </motion.div>
+        ) : (
+          <motion.div
+            key="copy"
+            initial={{ opacity: 0, scale: 0.5, rotateY: 90 }}
+            animate={{ opacity: 1, scale: 1, rotateY: 0 }}
+            exit={{ opacity: 0, scale: 0.5, rotateY: -90 }}
+            transition={{ duration: 0.20 }}
+          >
+            <Copy />
+          </motion.div>
+        )}
+      </AnimatePresence>
         </button>
     </div>
   )
