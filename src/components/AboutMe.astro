@@ -2,6 +2,7 @@
 import kevin from '@/assets/kevin.webp'
 import CopyEmailBtn from '@/components/ui/CopyEmailBtn'
 import { Image } from 'astro:assets'
+import DownloadCVBtn from './ui/DownloadCVBtn'
 ---
 
 <h2 class="section-header">Sobre Mí</h2>
@@ -28,6 +29,9 @@ import { Image } from 'astro:assets'
       oportunidades en las que pueda demostrar mis habilidades y contribuir en
       proyectos con impacto real.
     </p>
-    <CopyEmailBtn client:load />
+    <div class="flex flex-col gap-2">
+      <CopyEmailBtn client:load />
+      <DownloadCVBtn client:load />
+    </div>
   </main>
 </section>

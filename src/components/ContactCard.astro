@@ -2,6 +2,7 @@
 import { Icon } from 'astro-icon/components'
 import voxelAvatar from '@/assets/voxel-avatar.webp'
 import CopyEmailBtn from '@/components/ui/CopyEmailBtn'
+import DownloadCVBtn from './ui/DownloadCVBtn'
 ---
 
 <section
@@ -16,7 +17,7 @@ import CopyEmailBtn from '@/components/ui/CopyEmailBtn'
 
     <div class="flex flex-col gap-2">
       <CopyEmailBtn client:load />
-      <div class="flex gap-1">
+      <div class="flex gap-1 items-center">
         <a
           href="https://github.com/kevsantamaria"
           title="Perfil de GitHub"
@@ -31,6 +32,7 @@ import CopyEmailBtn from '@/components/ui/CopyEmailBtn'
           rel="noopener noreferrer"
           class="custom-link"><Icon name="tabler:brand-linkedin" size={22} /></a
         >
+        <DownloadCVBtn />
       </div>
     </div>
   </main>
