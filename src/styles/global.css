@@ -34,3 +34,17 @@ body {
 .download-cv-btn {
   @apply border border-custom-primary px-2 py-1 rounded-lg hover:bg-custom-primary cursor-pointer transition-colors duration-150;
 }
+
+.copy-email-btn {
+  @apply bg-custom-primary rounded-r-sm hover:bg-custom-primary-hover transition-colors duration-200 cursor-pointer flex items-center justify-center p-1
+}
+
+html::-webkit-scrollbar {
+  width: 5px;
+  height: 10px;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: var(--color-custom-primary);
+  @apply rounded;
+}
