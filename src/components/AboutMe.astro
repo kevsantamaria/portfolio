@@ -7,13 +7,13 @@ import DownloadCVBtn from './ui/DownloadCVBtn'
 
 <h2 class="section-header">Sobre Mí</h2>
 
-<section class="flex gap-4">
-  <aside class="h-full">
+<section class="flex flex-col sm:flex-row gap-4">
+  <aside class="h-full mx-auto">
     <Image
       src={kevin}
       alt="Kevin Santamaria"
       quality={100}
-      class="object-cover object-center rounded-lg select-none"
+      class="w-[120px] h-[120px] sm:w-full sm:h-auto object-cover object-center rounded-lg select-none"
     />
   </aside>
   <main class="flex flex-col gap-4">
@@ -29,7 +29,7 @@ import DownloadCVBtn from './ui/DownloadCVBtn'
       oportunidades en las que pueda demostrar mis habilidades y contribuir en
       proyectos con impacto real.
     </p>
-    <div class="flex flex-col gap-2">
+    <div class="flex sm:flex-row gap-2 items-center justify-center sm:justify-start">
       <CopyEmailBtn client:load />
       <DownloadCVBtn client:load />
     </div>
