@@ -1,7 +1,6 @@
 ---
 import kevin from '@/assets/kevin.webp'
 import CopyEmailBtn from '@/components/ui/CopyEmailBtn'
-import { Image } from 'astro:assets'
 import DownloadCVBtn from './ui/DownloadCVBtn'
 ---
 
@@ -9,10 +8,9 @@ import DownloadCVBtn from './ui/DownloadCVBtn'
 
 <section class="flex flex-col sm:flex-row gap-4">
   <aside class="h-full mx-auto">
-    <Image
-      src={kevin}
+    <img
+      src={kevin.src}
       alt="Kevin Santamaria"
-      quality={100}
       class="w-[120px] h-[120px] sm:w-full sm:h-auto object-cover object-center rounded-lg select-none"
     />
   </aside>
