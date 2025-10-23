@@ -6,7 +6,7 @@ import alanSansWoff2 from '@fontsource/alan-sans/files/alan-sans-latin-400-norma
 
 const {
   title = 'Kevin Santamaria | Desarrollador Frontend',
-  description = 'Soy Kevin Santamaria, desarrollador web frontend especializado en crear interfaces modernas, rápidas y centradas en la experiencia del usuario.',
+  description = 'Me llamo Kevin, soy desarrollador web frontend especializado en crear interfaces modernas, rápidas y centradas en la experiencia del usuario.',
   websiteUrl = 'https://kevsantamaria.netlify.app',
 } = Astro.props
 ---
@@ -19,6 +19,7 @@ const {
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
     <meta name="theme-color" content="#4f45ba" />
+    <meta property="og:logo" content="https://kevsantamaria.netlify.app/logo.png" />
 
     <!-- Open Graph -->
     <meta property="og:title" content={title} />
