@@ -3,19 +3,67 @@ import { Particles } from '@/components/ui/shadcn-io/particles'
 import Footer from '@/components/Footer.astro'
 import '@fontsource/alan-sans'
 import alanSansWoff2 from '@fontsource/alan-sans/files/alan-sans-latin-400-normal.woff2?url'
+
+const {
+  title = 'Kevin Santamaria | Desarrollador Frontend',
+  description = 'Soy Kevin Santamaria, desarrollador web frontend especializado en crear interfaces modernas, rápidas y centradas en la experiencia del usuario.',
+  websiteUrl = 'https://kevsantamaria.netlify.app',
+} = Astro.props
 ---
 
 <!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
-    <link rel="preload" as="font" type="font/woff2" href={alanSansWoff2} crossorigin="anonymous">
-    <title>Kevin Santamaria</title>
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#4f45ba" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={websiteUrl} />
+    <meta property="og:image" content="/og-image.jpeg" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="/og-image.jpeg" />
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Kevin Santamaria",
+        "url": "https://kevsantamaria.netlify.app",
+        "jobTitle": "Desarrollador Frontend",
+        "description": "Desarrollador web especializado en frontend, React y Astro.",
+        "image": "https://kevsantamaria.netlify.app/og-image.jpeg",
+        "sameAs": [
+          "https://github.com/kevsantamaria",
+          "https://linkedin.com/in/kevsantamaria/"
+        ]
+      }
+    </script>
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="canonical" href="https://kevsantamaria.netlify.app/" />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href={alanSansWoff2}
+      crossorigin="anonymous"
+    />
+    <title>{title}</title>
   </head>
-  <body class="relative h-full selection:bg-custom-secondary selection:text-gray-800 scroll-smooth">
+  <body
+    class="relative h-full selection:bg-custom-secondary selection:text-gray-800 scroll-smooth"
+  >
     <main class="mx-2 max-w-[600px] sm:mx-auto text-sm">
       <slot />
     </main>
