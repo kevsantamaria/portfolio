@@ -13,5 +13,5 @@ export default defineConfig({
   integrations: [icon(), react()],
 
   site: 'https://kevsantamaria.github.io',
-  base: 'portfolio',
+  base: '/portfolio/',
 })

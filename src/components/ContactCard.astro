@@ -2,6 +2,8 @@
 import { Icon } from 'astro-icon/components'
 import CopyEmailBtn from '@/components/ui/CopyEmailBtn'
 import DownloadCVBtn from './ui/DownloadCVBtn'
+import voxelAvatar from '@/assets/voxel-avatar.webp'
+import { Image } from 'astro:assets'
 ---
 
 <section
@@ -36,9 +38,10 @@ import DownloadCVBtn from './ui/DownloadCVBtn'
     </div>
   </main>
   <aside class="max-h-[150px] max-w-[150px]">
-    <img
-      src="/assets/voxel-avatar.webp"
-      alt="Voxel-art avatar"
+    <Image
+      src={voxelAvatar}
+      alt="Voxel-art avatar of Kevin"
+      aria-hidden="true"
       class="h-full w-full object-cover rounded-lg select-none"
     />
   </aside>

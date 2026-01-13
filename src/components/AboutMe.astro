@@ -1,21 +1,24 @@
 ---
 import CopyEmailBtn from '@/components/ui/CopyEmailBtn'
-import DownloadCVBtn from './ui/DownloadCVBtn'
+import DownloadCVBtn from '@/components/ui/DownloadCVBtn'
+import kevinPicture from '@/assets/kevin.webp'
+import { Image } from 'astro:assets'
 ---
 
 <h2 class="section-header">Sobre Mí</h2>
 
 <section class="flex flex-col sm:flex-row gap-4">
   <aside class="h-full mx-auto">
-    <img
-      src="/assets/kevin.webp"
+    <Image
+      src={kevinPicture}
       alt="Kevin Santamaria"
+      aria-hidden="true"
       class="w-[120px] h-[120px] sm:w-full sm:h-auto object-cover object-center rounded-lg select-none"
     />
   </aside>
   <main class="flex flex-col gap-4">
     <p>
-      Me llamo Kevin Santamaria, tengo 22 años y soy estudiante de Ingeniería
+      Mi nombre es Kevin Santamaria, tengo 22 años y soy estudiante de Ingeniería
       Informática. Como desarrollador frontend, me encanta diseñar interfaces
       que no solo luzcan bien, sino que también sean rápidas, accesibles y
       agradables de usar. He desarrollado proyectos personales que me han
