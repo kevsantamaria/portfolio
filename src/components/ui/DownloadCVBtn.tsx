@@ -1,6 +1,6 @@
 function DownloadCVBtn() {
   const downloadCV = () => {
-    const url = '/cv/Kevin-Santamaria-CV.pdf'
+    const url = './cv/KevinSantamariaCV.pdf'
 
     const downloadLink = document.createElement('a')
     downloadLink.href = url
