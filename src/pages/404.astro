@@ -1,1 +1,48 @@
-<h1>404 Not Found</h1>
+---
+import Layout from '@/layouts/Layout.astro'
+import { Icon } from 'astro-icon/components'
+import '@/styles/global.css'
+---
+
+<Layout title="404 - Página no encontrada">
+  <section class="flex flex-col items-center justify-center min-h-[100vh] px-4">
+    <div
+      class="container max-w-2xl shadow rounded-lg p-8 sm:p-12 flex flex-col items-center text-center transition-all duration-300 hover:shadow-lg"
+    >
+      <div class="mb-6 text-custom-secondary animate-bounce">
+        <Icon name="tabler:error-404" size={100} />
+      </div>
+      <h1 class="font-bold text-4xl sm:text-6xl mb-2 text-primary-custom-text">
+        ¡Ups!
+      </h1>
+      <p class="section-header text-2xl mt-0">Página no encontrada</p>
+      <p class="text-secondary-custom-text mb-8 max-w-md">
+        La página que buscabas no existe o ha sido movida.
+      </p>
+
+      <div class="flex flex-wrap justify-center gap-4">
+        <a
+          href="/"
+          class="download-cv-btn flex items-center gap-2 no-underline text-primary-custom-text"
+        >
+          <Icon name="tabler:home" size={20} />
+          Volver al inicio
+        </a>
+      </div>
+    </div>
+
+    <span
+      class="absolute -z-10 text-[15rem] font-bold opacity-[0.02] pointer-events-none select-none"
+    >
+      404
+    </span>
+  </section>
+</Layout>
+
+<style>
+  .download-cv-btn {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+  }
+</style>
