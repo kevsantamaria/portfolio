@@ -12,14 +12,14 @@
     "format": "prettier --write ."
   },
   "dependencies": {
-    "@astrojs/react": "^4.4.0",
+    "@astrojs/react": "^4.4.2",
     "@fontsource/alan-sans": "^5.2.1",
     "@iconify-json/skill-icons": "^1.2.3",
     "@iconify-json/tabler": "^1.2.23",
     "@tailwindcss/vite": "^4.1.14",
     "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.2",
-    "astro": "^5.14.5",
+    "astro": "^5.17.3",
     "astro-icon": "^1.1.5",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",

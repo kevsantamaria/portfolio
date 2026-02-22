@@ -42,35 +42,42 @@ const {
         >
           <Icon name="tabler:brand-github" size={24} />
         </a>
-        <a
-          href={liveDemoLink}
-          title="Visitar la demo"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="custom-link hover:scale-110 transition-transform"
-        >
-          <Icon name="tabler:link" size={24} />
-        </a>
+        {
+          liveDemoLink && (
+            <a
+              href={liveDemoLink}
+              title="Visitar la demo"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="custom-link hover:scale-110 transition-transform"
+            >
+              <Icon name="tabler:link" size={24} />
+            </a>
+          )
+        }
       </div>
     </div>
 
     <div class="flex flex-wrap gap-2 mt-3">
       {extraIcons?.map((icon: string) => <Icon name={icon} size={24} />)}
+      <Icon name="skill-icons:react-dark" size={24} />
+      <Icon name="skill-icons:tailwindcss-dark" size={24} />
+      <Icon name="skill-icons:vite-dark" size={24} />
       <Icon name="skill-icons:html" size={24} />
       <Icon name="skill-icons:css" size={24} />
-      <Icon name="skill-icons:tailwindcss-dark" size={24} />
-      <Icon name="skill-icons:react-dark" size={24} />
-      <Icon name="skill-icons:vite-dark" size={24} />
-      <Icon name="skill-icons:bun-dark" size={24} />
     </div>
 
     <div class="mt-4 space-y-2">
       <p class="text-sm text-secondary-custom-text leading-relaxed">
         {description}
       </p>
-      <p class="text-sm text-secondary-custom-text leading-relaxed">
-        {descriptionTwo}
-      </p>
+      {
+        descriptionTwo && (
+          <p class="text-sm text-secondary-custom-text leading-relaxed">
+            {descriptionTwo}
+          </p>
+        )
+      }
     </div>
   </main>
 </article>

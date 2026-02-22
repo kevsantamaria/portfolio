@@ -13,10 +13,6 @@
   --color-secondary-custom-text: hsl(240, 8%, 40%);
 }
 
-.sds {
-  color: hsl(0, 0%, 90%);
-}
-
 .dark {
   --color-custom-primary: hsl(245, 46%, 50%);
   --color-custom-primary-hover: hsl(245, 57%, 58%);

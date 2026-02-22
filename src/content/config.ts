@@ -11,7 +11,7 @@ const projectsCollection = defineCollection({
       img: image(),
       imgAlt: z.string(),
       githubLink: z.string().url(),
-      liveDemoLink: z.string().url(),
+      liveDemoLink: z.string().url().optional(),
       extraIcons: z.array(z.string()).optional(),
     }),
 })
