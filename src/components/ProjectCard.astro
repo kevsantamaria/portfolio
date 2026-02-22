@@ -15,32 +15,46 @@ const {
 ---
 
 <article
-  class="group flex rounded-lg min-h-[222px] max-h-[400px] bg-custom-card shadow transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+  class="group flex flex-col md:flex-row rounded-lg bg-custom-card shadow transition-all duration-300 hover:shadow-lg hover:-translate-y-1 overflow-hidden"
 >
-  <aside class="w-[300px] min-h-[250px] overflow-hidden rounded-l-lg">
-    <Image src={img} alt={imgAlt} aria-hidden="true" class="w-full h-full object-cover select-none" fetchpriority="high"/>
+  <aside
+    class="w-full md:w-[300px] h-52 md:h-auto md:min-h-[250px] overflow-hidden"
+  >
+    <Image
+      src={img}
+      alt={imgAlt}
+      aria-hidden="true"
+      class="w-full h-full object-cover select-none"
+      fetchpriority="high"
+    />
   </aside>
-  <main class="w-full p-4">
+
+  <main class="w-full p-5 flex flex-col">
     <div class="w-full flex items-center justify-between">
-      <h3 class="font-bold sm:text-xl">{name}</h3>
-      <div class="flex gap-1 items-center">
+      <h3 class="font-bold text-lg sm:text-xl text-text-main">{name}</h3>
+      <div class="flex gap-3 items-center">
         <a
           href={githubLink}
           title="Ir al repositorio"
           target="_blank"
           rel="noopener noreferrer"
-          class="custom-link"><Icon name="tabler:brand-github" size={22} /></a
+          class="custom-link hover:scale-110 transition-transform"
         >
+          <Icon name="tabler:brand-github" size={24} />
+        </a>
         <a
           href={liveDemoLink}
           title="Visitar la demo"
           target="_blank"
           rel="noopener noreferrer"
-          class="custom-link"><Icon name="tabler:link" size={22} /></a
+          class="custom-link hover:scale-110 transition-transform"
         >
+          <Icon name="tabler:link" size={24} />
+        </a>
       </div>
     </div>
-    <div class="flex gap-1 mt-2">
+
+    <div class="flex flex-wrap gap-2 mt-3">
       {extraIcons?.map((icon: string) => <Icon name={icon} size={24} />)}
       <Icon name="skill-icons:html" size={24} />
       <Icon name="skill-icons:css" size={24} />
@@ -49,7 +63,14 @@ const {
       <Icon name="skill-icons:vite-dark" size={24} />
       <Icon name="skill-icons:bun-dark" size={24} />
     </div>
-    <p class="text-xs sm:text-sm mt-2 text-secondary-custom-text">{description}</p>
-    <p class="text-xs sm:text-sm mt-2 text-secondary-custom-text">{descriptionTwo}</p>
+
+    <div class="mt-4 space-y-2">
+      <p class="text-sm text-secondary-custom-text leading-relaxed">
+        {description}
+      </p>
+      <p class="text-sm text-secondary-custom-text leading-relaxed">
+        {descriptionTwo}
+      </p>
+    </div>
   </main>
 </article>
