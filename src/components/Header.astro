@@ -1,0 +1,25 @@
+---
+import { Icon } from 'astro-icon/components'
+---
+
+<header class="w-full flex justify-end">
+  <button
+    id="theme-btn"
+    class="p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors mt-4 cursor-pointer"
+  >
+    <span class="dark:hidden"><Icon name="tabler:moon" size={24} /></span>
+    <span class="hidden dark:inline"><Icon name="tabler:sun" size={24} /></span>
+  </button>
+</header>
+
+<script>
+  function setupThemeToggle() {
+    const btn = document.getElementById('theme-btn')
+    btn?.addEventListener('click', () => {
+      const isDark = document.documentElement.classList.toggle('dark')
+      localStorage.setItem('theme', isDark ? 'dark' : 'light')
+    })
+  }
+
+  setupThemeToggle()
+</script>

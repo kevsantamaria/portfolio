@@ -47,6 +47,7 @@ const {
         "sameAs": [
           "https://github.com/kevsantamaria",
           "https://linkedin.com/in/kevsantamaria/"
+          "https://www.instagram.com/kevin_sd03/"
         ]
       }
     </script>
@@ -61,14 +62,26 @@ const {
       crossorigin="anonymous"
     />
     <title>{title}</title>
+
+    <script is:inline>
+      const setDarkMode = () => {
+        const theme = localStorage.getItem('theme') ||
+          (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+
+        document.documentElement.classList.toggle('dark', theme === 'dark');
+      };
+
+      setDarkMode();
+    </script>
+
   </head>
   <body
-    class="relative h-full selection:bg-custom-secondary selection:text-gray-800 scroll-smooth"
+    class="relative text-sm h-full selection:bg-custom-secondary selection:text-gray-800 scroll-smooth"
   >
-    <main class="mx-2 max-w-[600px] sm:mx-auto text-sm">
+    <main class="max-w-[600px] mx-2 sm:mx-auto">
       <slot />
     </main>
-    <footer class="mx-2 max-w-[600px] sm:mx-auto text-sm mt-8 mb-4 text-center">
+    <footer class="max-w-[600px] mx-2 sm:mx-auto mt-8 mb-4 text-center">
       <Footer />
     </footer>
     <Particles

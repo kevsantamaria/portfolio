@@ -23,7 +23,7 @@ function CopyEmailBtn() {
     <div className="w-fit text-xs sm:text-sm pl-2 bg-inherit border border-custom-primary rounded-lg flex items-center justify-between gap-2">
       <span ref={emailRef}>kevsantamaria01@gmail.com</span>
       <button
-        className="copy-email-btn"
+        className="copy-email-btn text-[#f4f4f6]"
         onClick={copyEmail}
         aria-label="Copiar email"
       >

@@ -1,22 +1,36 @@
 @import 'tailwindcss';
-@import "tw-animate-css";
+@import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
-
-body {
-  color: var(--color-primary-custom-text);
-  background-color: var(--color-custom-bg);
-  font-family: 'Alan Sans', sans-serif, system-ui;
-}
 
 @theme {
   --color-custom-primary: hsl(245, 46%, 50%);
   --color-custom-primary-hover: hsl(245, 57%, 58%);
   --color-custom-secondary: hsl(51, 79%, 50%);
+  --color-custom-bg: hsl(20, 10%, 95%);
+  --color-custom-card: hsl(240, 20%, 90%);
+  --color-primary-custom-text: hsl(240, 10%, 10%);
+  --color-secondary-custom-text: hsl(240, 8%, 40%);
+}
+
+.sds {
+  color: hsl(0, 0%, 90%);
+}
+
+.dark {
+  --color-custom-primary: hsl(245, 46%, 50%);
+  --color-custom-primary-hover: hsl(245, 57%, 58%);
+  --color-custom-secondary: hsl(51, 79%, 50%);
   --color-custom-bg: hsl(240, 24%, 6%);
   --color-custom-card: hsl(243, 26%, 14%);
-  --color-primary-custom-text: hsl(240, 11%, 96%);
+  --color-primary-custom-text: hsl(240, 10%, 96%);
   --color-secondary-custom-text: hsl(240, 15%, 80%);
+}
+
+body {
+  color: var(--color-primary-custom-text);
+  background-color: var(--color-custom-bg);
+  font-family: 'Alan Sans', sans-serif, system-ui;
 }
 
 .custom-link {
@@ -28,7 +42,7 @@ body {
 }
 
 .section-header {
-  @apply font-bold text-xl mt-5 mb-3 text-custom-secondary
+  @apply font-bold text-xl mt-5 mb-3 text-custom-secondary;
 }
 
 .download-cv-btn {
@@ -36,7 +50,7 @@ body {
 }
 
 .copy-email-btn {
-  @apply bg-custom-primary rounded-r-sm hover:bg-custom-primary-hover transition-colors duration-200 cursor-pointer flex items-center justify-center p-1
+  @apply bg-custom-primary rounded-r-sm hover:bg-custom-primary-hover transition-colors duration-200 cursor-pointer flex items-center justify-center p-1;
 }
 
 html::-webkit-scrollbar {
