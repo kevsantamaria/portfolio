@@ -1,1 +1,7 @@
 User-agent: *
+Allow: /
+
+# No indexar la página de error directamente
+Disallow: /404
+
+Sitemap: https://kevsantamaria.is-a.dev/sitemap-index.xml
