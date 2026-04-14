@@ -42,7 +42,7 @@ body {
 }
 
 .download-cv-btn {
-  @apply border border-custom-primary px-2 py-1 rounded-lg hover:bg-custom-primary cursor-pointer transition-colors duration-150;
+  @apply border border-custom-primary px-2 py-1.5 rounded-lg hover:bg-custom-primary cursor-pointer transition-colors duration-150;
 }
 
 .copy-email-btn {
