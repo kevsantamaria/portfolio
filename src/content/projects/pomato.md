@@ -1,10 +1,10 @@
 ---
 name: Pomate
 order: 2
-description: Herramienta basada en la técnica Pomodoro, que alterna períodos de trabajo y descanso. Cuenta con un temporizador personalizable, notificaciones sonoras y una interfaz estilo pixel art.
-descriptionTwo: Un proyecto sencillo pero significativo que me permitió fortalecer mis bases en React y la gestión del estado en interfaces interactivas.
+description: Pomodoro-based tool that alternates work and rest periods. Features a customizable timer, sound notifications, and a pixel art-style interface.
+descriptionTwo: A simple yet meaningful project that allowed me to strengthen my foundations in React and state management in interactive interfaces.
 img: '@/assets/pomatoScreenshot.webp'
-imgAlt: Screenshot de aplicacion de pomodoro
+imgAlt: Screenshot of Pomodoro application
 githubLink: https://github.com/kevsantamaria/pomodoro-app
 liveDemoLink: https://pomate.netlify.app/
 extraIcons:

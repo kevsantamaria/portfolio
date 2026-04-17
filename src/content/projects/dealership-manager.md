@@ -1,10 +1,10 @@
 ---
 name: Dealership Manager
 order: 1
-description: Plataforma web full-stack orientada a la gestión y visualización de datos de un concesionario. Este proyecto no solo representó un reto técnico integral, sino que también me brindó una visión clara de lo que implica desarrollar una aplicación robusta, desde la organización del código y la comunicación entre servicios hasta la experiencia de usuario fluida y la confiabilidad en entornos reales.
-descriptionTwo: El sistema incluye validaciones de datos, control centralizado de errores y una gestión avanzada de formularios y datos asíncronos, resultando en una solución sólida y escalable.
+description: A full-stack web platform designed for managing and visualizing dealership data. This project not only represented a comprehensive technical challenge, but also gave me a clear vision of what it means to develop a robust application, from code organization and service communication to smooth user experience and reliability in real-world environments.
+descriptionTwo: The system includes data validation, centralized error handling, and advanced management of forms and asynchronous data, resulting in a solid and scalable solution.
 img: '@/assets/dealershipManagerScreenshot.webp'
-imgAlt: Screenshot de aplicacion Dealership Manager
+imgAlt: Screenshot of Dealership Manager application
 githubLink: https://github.com/kevsantamaria/dealership-manager
 extraIcons:
   - 'skill-icons:typescript'

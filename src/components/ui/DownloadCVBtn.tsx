@@ -10,7 +10,7 @@ function DownloadCVBtn() {
 
   return (
     <button className="download-cv-btn" onClick={downloadCV}>
-      Descargar CV
+      Download CV
     </button>
   )
 }

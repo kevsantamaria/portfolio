@@ -25,7 +25,7 @@ function CopyEmailBtn() {
       <button
         className="copy-email-btn text-[#f4f4f6]"
         onClick={copyEmail}
-        aria-label="Copiar email"
+        aria-label="Copy email"
       >
         <AnimatePresence mode="wait" initial={false}>
           {copied ? (
