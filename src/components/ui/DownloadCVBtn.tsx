@@ -9,7 +9,7 @@ function DownloadCVBtn() {
   }
 
   return (
-    <button className="download-cv-btn" onClick={downloadCV}>
+    <button className="custom-btn" onClick={downloadCV}>
       Download CV
     </button>
   )

@@ -41,8 +41,8 @@ body {
   @apply font-bold text-xl mt-5 mb-3 text-custom-secondary;
 }
 
-.download-cv-btn {
-  @apply border border-custom-primary px-2 py-1.5 rounded-lg hover:bg-custom-primary cursor-pointer transition-colors duration-150;
+.custom-btn {
+  @apply border border-custom-primary px-2 py-1.5 rounded-lg hover:bg-custom-primary hover:text-white cursor-pointer transition-colors duration-150;
 }
 
 .copy-email-btn {
