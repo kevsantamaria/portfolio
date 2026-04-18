@@ -7,7 +7,7 @@ import { Image } from 'astro:assets'
 
 <h2 class="section-header">About Me</h2>
 
-<section class="flex flex-col sm:flex-row gap-4">
+<section class="flex flex-col sm:flex-row-reverse gap-4 sm:h-fit">
   <aside class="h-full mx-auto">
     <Image
       src={kevinPicture}
@@ -17,7 +17,7 @@ import { Image } from 'astro:assets'
       class="w-[120px] h-[120px] sm:w-[700px] sm:h-auto object-cover object-center rounded-lg select-none"
     />
   </aside>
-  <main class="flex flex-col gap-4">
+  <main class="flex flex-col gap-4 justify-center">
     <p>
       My name is Kevin Santamaria, I'm 22 years old and a Computer Science
       Engineering student. I'm a full-stack developer, with a primary emphasis
