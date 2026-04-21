@@ -2,82 +2,71 @@
 import { Icon } from 'astro-icon/components'
 import { Image } from 'astro:assets'
 
-const {
-  name,
-  description,
-  descriptionTwo,
-  img,
-  imgAlt,
-  githubLink,
-  liveDemoLink,
-  extraIcons,
-} = Astro.props
+const { name, description, img, imgAlt, githubLink, liveDemoLink, extraIcons } =
+  Astro.props
 ---
 
 <article
-  class="group flex flex-col md:flex-row rounded-lg bg-custom-card shadow transition-all duration-300 hover:shadow-lg hover:-translate-y-1 overflow-hidden"
+  class="group relative flex flex-col w-full min-h-[300px] rounded-lg overflow-hidden shadow transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
 >
-  <aside
-    class="w-full md:w-[300px] h-52 md:h-auto md:min-h-[250px] overflow-hidden"
-  >
+  <aside class="absolute inset-0 z-0">
     <Image
       src={img}
       alt={imgAlt}
-      aria-hidden="true"
-      class="w-full h-full object-cover select-none"
+      class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
       fetchpriority="high"
+      loading="lazy"
     />
   </aside>
 
-  <main class="w-full p-5 flex flex-col">
-    <div class="w-full flex items-center justify-between">
-      <h3 class="font-bold text-lg sm:text-xl text-text-main">{name}</h3>
-      <div class="flex gap-3 items-center">
+  <div
+    class="relative z-20 flex ml-auto gap-2 w-fit bg-custom-card p-1 rounded m-2"
+  >
+    <a
+      href={githubLink}
+      title="Go to repository"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="custom-link"
+    >
+      <Icon name="tabler:brand-github" size={20} />
+    </a>
+    {
+      liveDemoLink && (
         <a
-          href={githubLink}
-          title="Go to repository"
+          href={liveDemoLink}
+          title="Visit demo"
           target="_blank"
           rel="noopener noreferrer"
-          class="custom-link hover:scale-110 transition-transform"
+          class="custom-link"
         >
-          <Icon name="tabler:brand-github" size={24} />
+          <Icon name="tabler:link" size={20} />
         </a>
-        {
-          liveDemoLink && (
-            <a
-              href={liveDemoLink}
-              title="Visit demo"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="custom-link hover:scale-110 transition-transform"
-            >
-              <Icon name="tabler:link" size={24} />
-            </a>
-          )
-        }
-      </div>
+      )
+    }
+  </div>
+
+  <main
+    class="relative z-20 bg-custom-card mt-auto w-fit p-4 m-2 rounded-lg flex flex-col text-primary-custom-text"
+  >
+    <div class="w-full flex items-center justify-between">
+      <h3 class="font-bold text-lg sm:text-xl drop-shadow-md">
+        {name}
+      </h3>
     </div>
 
-    <div class="flex flex-wrap gap-2 mt-3">
-      {extraIcons?.map((icon: string) => <Icon name={icon} size={24} />)}
-      <Icon name="skill-icons:react-dark" size={24} />
-      <Icon name="skill-icons:tailwindcss-dark" size={24} />
-      <Icon name="skill-icons:vite-dark" size={24} />
-      <Icon name="skill-icons:html" size={24} />
-      <Icon name="skill-icons:css" size={24} />
+    <div class="flex flex-wrap gap-2 mt-2">
+      {
+        extraIcons?.map((icon: string) => (
+          <Icon name={icon} size={18} class="text-white/70" />
+        ))
+      }
     </div>
 
-    <div class="mt-4 space-y-2">
-      <p class="text-sm text-secondary-custom-text leading-relaxed">
+    <div class="mt-3 space-y-2">
+      <p class="text-sm text-secondary-custom-text leading-relaxed drop-shadow">
         {description}
       </p>
-      {
-        descriptionTwo && (
-          <p class="text-sm text-secondary-custom-text leading-relaxed">
-            {descriptionTwo}
-          </p>
-        )
-      }
     </div>
   </main>
 </article>
