@@ -1,0 +1,51 @@
+---
+const experiences = [
+  {
+    role: 'Frontend Developer',
+    company: 'GoDjango',
+    period: 'Feb 2026 — Present',
+    description:
+      'Built and maintained responsive web applications using React, TypeScript, and Next.js. Collaborated with cross-functional teams to deliver pixel-perfect UI implementations and improved Core Web Vitals by 35%.',
+  },
+  {
+    role: 'Web Developer',
+    company: 'University of Matanzas',
+    period: 'Jan 2025 — Present',
+    description:
+      'Develop modern landing pages and web applications for the campus. Maintain academic websites using WordPress, ensuring functionality, accessibility, and responsive design.',
+  },
+]
+---
+
+<h2 class="section-header">Experience</h2>
+
+<section class="relative flex flex-col gap-8 pl-7 sm:pl-9 mb-8">
+  <div
+    class="absolute left-[7px] sm:left-[9px] top-2 bottom-2 w-[2px] bg-custom-primary/30"
+  >
+  </div>
+
+  {
+    experiences.map((exp) => (
+      <div class="relative">
+        <div class="absolute -left-[18px] sm:-left-[22px] top-1.5 w-[14px] h-[14px] sm:w-[18px] sm:h-[18px] rounded-full bg-custom-primary border-[3px] border-custom-bg" />
+        <div class="bg-custom-card rounded-lg p-4 sm:p-5 shadow transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-1">
+            <h3 class="font-bold text-sm sm:text-lg text-primary-custom-text">
+              {exp.role}
+            </h3>
+            <span class="text-xs text-custom-secondary font-medium whitespace-nowrap">
+              {exp.period}
+            </span>
+          </div>
+          <p class="text-xs sm:text-sm text-custom-primary font-medium mb-2">
+            {exp.company}
+          </p>
+          <p class="text-xs sm:text-sm text-secondary-custom-text leading-relaxed">
+            {exp.description}
+          </p>
+        </div>
+      </div>
+    ))
+  }
+</section>
