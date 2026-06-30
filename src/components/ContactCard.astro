@@ -4,6 +4,7 @@ import CopyEmailBtn from '@/components/ui/CopyEmailBtn'
 import DownloadCVBtn from './ui/DownloadCVBtn'
 import voxelAvatar from '@/assets/voxel-avatar.webp'
 import { Image } from 'astro:assets'
+import { CONFIG } from '@/config/config'
 ---
 
 <section
@@ -24,21 +25,21 @@ import { Image } from 'astro:assets'
       <CopyEmailBtn client:idle />
       <div class="flex gap-1.5 items-center sm:mt-2">
         <a
-          href="https://github.com/kevsantamaria"
+          href={CONFIG.github}
           title="GitHub Profile"
           target="_blank"
           rel="noopener noreferrer"
           class="custom-link"><Icon name="tabler:brand-github" size={22} /></a
         >
         <a
-          href="https://linkedin.com/in/kevsantamaria/"
+          href={CONFIG.linkedin}
           title="LinkedIn Profile"
           target="_blank"
           rel="noopener noreferrer"
           class="custom-link"><Icon name="tabler:brand-linkedin" size={22} /></a
         >
         <a
-          href="https://t.me/kevsd03"
+          href={CONFIG.telegram}
           title="Telegram Profile"
           target="_blank"
           rel="noopener noreferrer"

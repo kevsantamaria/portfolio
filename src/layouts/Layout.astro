@@ -1,12 +1,13 @@
 ---
 import { Particles } from '@/components/ui/shadcn-io/particles'
+import { CONFIG } from '@/config/config'
 import '@fontsource/alan-sans'
 import alanSansWoff2 from '@fontsource/alan-sans/files/alan-sans-latin-400-normal.woff2?url'
 
 const {
   title = 'Kevin Santamaria | Frontend Developer',
   description = 'Kevin Santamaria — Frontend Developer: Focused on fast, accessible interfaces and well-structured web systems.',
-  websiteUrl = 'https://kevsantamaria.is-a.dev',
+  websiteUrl = CONFIG.websiteUrl,
 } = Astro.props
 ---
 
@@ -20,7 +21,7 @@ const {
     <meta name="theme-color" content="#4f45ba" />
     <meta
       property="og:logo"
-      content="https://kevsantamaria.is-a.dev/logo.png"
+      content={CONFIG.websiteUrl + '/logo.png'}
     />
 
     <!-- Open Graph -->
@@ -30,7 +31,7 @@ const {
     <meta property="og:url" content={websiteUrl} />
     <meta
       property="og:image"
-      content="https://kevsantamaria.is-a.dev/og-image.jpeg"
+      content={CONFIG.websiteUrl + '/og-image.jpeg'}
     />
 
     <!-- Twitter Card -->
@@ -39,7 +40,7 @@ const {
     <meta name="twitter:description" content={description} />
     <meta
       name="twitter:image"
-      content="https://kevsantamaria.is-a.dev/og-image.jpeg"
+      content={CONFIG.websiteUrl + '/og-image.jpeg'}
     />
 
     <meta
@@ -53,10 +54,10 @@ const {
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Kevin Santamaria",
-        "url": "https://kevsantamaria.is-a.dev",
+        "url": CONFIG.websiteUrl,
         "jobTitle": "Frontend Developer",
         "description": "Frontend developer with a focus in crafting fast, accessible, and high-fidelity web interfaces",
-        "image": "https://kevsantamaria.is-a.dev/og-image.jpeg",
+        "image": CONFIG.websiteUrl + '/og-image.jpeg',
         "sameAs": [
           "https://github.com/kevsantamaria",
           "https://linkedin.com/in/kevsantamaria/",
@@ -66,7 +67,7 @@ const {
     </script>
 
     <link rel="icon" href="./favicon.ico" />
-    <link rel="canonical" href="https://kevsantamaria.is-a.dev/" />
+    <link rel="canonical" href={CONFIG.websiteUrl + '/'} />
     <link
       rel="preload"
       as="font"

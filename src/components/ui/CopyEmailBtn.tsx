@@ -2,6 +2,7 @@ import { useRef, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Check from '@/components/icons/Check'
 import Copy from '@/components/icons/Copy'
+import { CONFIG } from '@/config/config'
 
 function CopyEmailBtn() {
   const [copied, setCopied] = useState(false)
@@ -21,7 +22,7 @@ function CopyEmailBtn() {
 
   return (
     <div className="w-fit text-xs sm:text-sm pl-2 bg-inherit border border-custom-primary rounded-lg flex items-center justify-between gap-2">
-      <span ref={emailRef}>kevsantamaria01@gmail.com</span>
+      <span ref={emailRef}>{CONFIG.email}</span>
       <button
         className="copy-email-btn text-[#f4f4f6]"
         onClick={copyEmail}
