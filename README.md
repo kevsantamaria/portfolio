@@ -1,7 +1,7 @@
-# 👤 Portafolio Personal
+# 👤 Personal Portfolio
 
-- Creado con **Astro** y **React**, con el objetivo de mostrar mis proyectos.
+- Created with **Astro** and **React**, with the goal of showcasing my projects.
 
 ![screenshot](/public/screenshot.webp)
 
-🌐 **Demo:** [https://kevsantamaria.netlify.app](https://kevsantamaria.netlify.app)
+🌐 **Demo:** [https://kevsantamaria.is-a.dev](https://kevsantamaria.is-a.dev)
