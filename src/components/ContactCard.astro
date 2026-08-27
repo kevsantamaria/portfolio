@@ -1,7 +1,6 @@
 ---
 import { Icon } from 'astro-icon/components'
 import CopyEmailBtn from '@/components/ui/CopyEmailBtn'
-import DownloadCVBtn from './ui/DownloadCVBtn'
 import voxelAvatar from '@/assets/voxel-avatar.webp'
 import { Image } from 'astro:assets'
 import { CONFIG } from '@/config/config'
@@ -13,11 +12,11 @@ import { CONFIG } from '@/config/config'
   <main class="flex flex-col items-left">
     <div class="mb-2 sm:mb-6">
       <h1 class="font-bold text-[22px] sm:text-3xl">Kevin Santamaria</h1>
-      <p class="text-xs sm:text-sm text-secondary-custom-text">
+      <p class="text-sm sm:text-md text-secondary-custom-text">
         Frontend Developer
       </p>
-      <p class="text-xs sm:text-sm text-secondary-custom-text">
-        + 2 years of experience
+      <p class="text-sm sm:text-md text-secondary-custom-text">
+        3 years of experience
       </p>
     </div>
 
@@ -45,7 +44,7 @@ import { CONFIG } from '@/config/config'
           rel="noopener noreferrer"
           class="custom-link"><Icon name="tabler:brand-telegram" size={22} /></a
         >
-        <DownloadCVBtn client:idle />
+        <!-- <DownloadCVBtn client:idle /> -->
       </div>
     </div>
   </main>

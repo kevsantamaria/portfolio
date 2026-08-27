@@ -1,6 +1,5 @@
 ---
 import CopyEmailBtn from '@/components/ui/CopyEmailBtn'
-import DownloadCVBtn from '@/components/ui/DownloadCVBtn'
 import kevinPicture from '@/assets/kevin.webp'
 import { Image } from 'astro:assets'
 ---
@@ -20,13 +19,13 @@ import { Image } from 'astro:assets'
   </aside>
   <main class="flex flex-col gap-4 justify-center">
     <p>
-      I'm Kevin Santamaria, a 23-year-old Computer Engineering student and
-      Frontend Developer. I specialize in crafting fast, accessible, and
-      high-fidelity interfaces with a sharp eye for design. While my focus is in
-      the frontend, I possess the technical depth to build and manage the
-      backend logic that powers seamless user experiences. From academic
-      challenges to personal projects, I’m constantly pushing the boundaries of
-      the latest web technologies.
+      I'm Kevin, a 23-year-old Computer Engineering student and Frontend
+      Developer. I specialize in crafting fast, accessible, and high-fidelity
+      interfaces with a sharp eye for design. While my focus is in the frontend,
+      I possess the technical depth to build and manage the backend logic that
+      powers seamless user experiences. From academic challenges to personal
+      projects, I’m constantly pushing the boundaries of the latest web
+      technologies.
     </p>
     <p>
       My goal is to continue growing as a developer and find opportunities where
@@ -36,7 +35,7 @@ import { Image } from 'astro:assets'
       class="flex sm:flex-row gap-2 items-center justify-center sm:justify-start"
     >
       <CopyEmailBtn client:idle />
-      <DownloadCVBtn client:idle />
+      <!-- <DownloadCVBtn client:idle /> -->
     </div>
   </main>
 </section>
